@@ -19,7 +19,8 @@
 
 #!/usr/bin/env python
 
-from distutils.core import setup
+
+from setuptools import setup
 
 setup(name = "locfdr-python",
     version = "0.1",
@@ -31,7 +32,7 @@ setup(name = "locfdr-python",
     download_url = "https://github.com/buci/locfdr-python",
     platforms = ['any'],
     license = "GPLv2",
-    py_modules = ['locfdr', 'locfns', 'Rfunctions'],
+    packages=['locfdr'],
     classifiers = [
         'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
         'Development Status :: 5 - Production/Stable',

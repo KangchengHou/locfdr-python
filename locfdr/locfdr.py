@@ -25,8 +25,8 @@ from scipy import stats
 import pandas as pd
 from statsmodels.api import families
 from statsmodels.formula.api import glm
-import locfns as lf
-import Rfunctions as rf
+import locfdr.locfns as lf
+import locfdr.Rfunctions as rf
 import warnings as wa
 import inspect as it
 
@@ -161,7 +161,7 @@ def locfdr(zz, bre = 120, df = 7, pct = 0., pct0 = 1./4, nulltype = 1, type = 0,
             columns=['delta', 'sigma', 'p0'])
     fp0.loc['thest'][0:2] = np.array([0,1])
     fp0.loc['theSD'][0:2] = 0
-    imax = l.argmax()
+    imax = l.idxmax()
     xmax = x[imax]
     try:
         len(pct)
